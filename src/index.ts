@@ -1,4 +1,4 @@
-import { ArrangeKeysProps, ArrangeKeysReturnProps } from "./type";
+import { ExtractArrayKeysProps, ExtractArrayKeysReturnProps } from "./type";
 
 /**
  * Method is used for arrange your object keys from array.
@@ -17,7 +17,9 @@ import { ArrangeKeysProps, ArrangeKeysReturnProps } from "./type";
  *
  */
 
-const arrangeKeys: (props: ArrangeKeysProps) => ArrangeKeysReturnProps = ({
+const extractArrayKeys: (
+  props: ExtractArrayKeysProps
+) => ExtractArrayKeysReturnProps = ({
   array,
   excludedKeys = [],
   includedKeys = [],
@@ -89,4 +91,4 @@ const arrangeKeys: (props: ArrangeKeysProps) => ArrangeKeysReturnProps = ({
   };
 };
 
-export default arrangeKeys;
+export default extractArrayKeys;

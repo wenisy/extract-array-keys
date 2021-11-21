@@ -2,14 +2,14 @@ export interface ArrayKey {
   [key: string]: any | ArrayKey;
 }
 
-export interface ArrangeKeysProps {
+export interface ExtractArrayKeysProps {
   array: ArrayKey[];
   excludedKeys?: string[];
   includedKeys?: string[];
   specificKey?: string;
 }
 
-export interface ArrangeKeysReturnProps {
+export interface ExtractArrayKeysReturnProps {
   duplicatedKeys: string[];
   uniqueKeys: string[];
 }

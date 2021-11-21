@@ -1,7 +1,7 @@
-import arrangeKeys from "../index";
+import extractArrayKeys from "../index";
 
 describe("with only array", () => {
-  const { duplicatedKeys, uniqueKeys } = arrangeKeys({
+  const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
     array: [
       { a: 1, b: 2, c: 3, d: 4 },
       { a: 1, b: 2, c: 3, d: 5 },
@@ -19,7 +19,7 @@ describe("with only array", () => {
 });
 
 describe("with array and excludedKeys", () => {
-  const { duplicatedKeys, uniqueKeys } = arrangeKeys({
+  const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
     array: [
       { a: 1, b: 2, c: 3, d: 4 },
       { a: 1, b: 2, c: 3, d: 5 },
@@ -43,7 +43,7 @@ describe("with array and excludedKeys", () => {
 });
 
 describe("with array and specificKey", () => {
-  const { duplicatedKeys, uniqueKeys } = arrangeKeys({
+  const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
     specificKey: "metric",
     array: [
       { metric: { a: 1, b: 2, c: 3, d: 4 }, value: { x: 1, y: 2, z: 3 } },
@@ -62,7 +62,7 @@ describe("with array and specificKey", () => {
 });
 
 describe("with array, specificKey, excludedKeys and includedKeys", () => {
-  const { duplicatedKeys, uniqueKeys } = arrangeKeys({
+  const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
     specificKey: "metric",
     array: [
       { metric: { a: 1, b: 2, c: 3, d: 4 }, value: { x: 1, y: 2, z: 3 } },
@@ -89,7 +89,7 @@ describe("with array, specificKey, excludedKeys and includedKeys", () => {
 });
 
 describe("with array and includedKeys", () => {
-  const { duplicatedKeys, uniqueKeys } = arrangeKeys({
+  const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
     array: [
       { a: 1, b: 2, c: 3, d: 4 },
       { a: 1, b: 2, c: 3, d: 5 },
@@ -108,11 +108,11 @@ describe("with array and includedKeys", () => {
 
 describe("with incorrect params", () => {
   test("array is empty", () => {
-    expect(() => arrangeKeys({ array: [] })).toThrow("Array cant not be empty");
+    expect(() => extractArrayKeys({ array: [] })).toThrow("Array cant not be empty");
   });
   test("a key can not appear in excludedKeys and includedKeys at the same time", () => {
     expect(() =>
-      arrangeKeys({
+      extractArrayKeys({
         array: [{ a: 1, b: 2, c: 3, d: 4 }],
         excludedKeys: ["a"],
         includedKeys: ["a"],

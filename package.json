@@ -1,5 +1,5 @@
 {
-  "name": "arrange-keys",
+  "name": "extract-array-keys",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
