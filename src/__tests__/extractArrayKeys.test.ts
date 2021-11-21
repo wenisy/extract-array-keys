@@ -108,7 +108,9 @@ describe("with array and includedKeys", () => {
 
 describe("with incorrect params", () => {
   test("array is empty", () => {
-    expect(() => extractArrayKeys({ array: [] })).toThrow("Array cant not be empty");
+    expect(() => extractArrayKeys({ array: [] })).toThrow(
+      "Array cant not be empty"
+    );
   });
   test("a key can not appear in excludedKeys and includedKeys at the same time", () => {
     expect(() =>
