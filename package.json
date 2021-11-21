@@ -18,7 +18,7 @@
     "type": "git",
     "url": "git+https://github.com/wenisy/extract-array-keys.git"
   },
-  "keywords": [],
+  "keywords": ["extract array object", "extract object", "extract array"],
   "author": "",
   "license": "ISC",
   "bugs": {
