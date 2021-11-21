@@ -7,6 +7,13 @@ Method is used for arrange your object keys from array.
 it will put all object keys with same key+value in duplicatedKeys
 itt will put all object keys with different key+values in uniqueKeys
 
+# **Install**
+`yarn add extract-array-keys`
+
+`npm install extract-array-keys`
+
+---
+
 # **Usage**
 
 ## With only array
