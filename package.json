@@ -16,15 +16,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wenisy/arrange-keys.git"
+    "url": "git+https://github.com/wenisy/extract-array-keys.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/wenisy/arrange-keys/issues"
+    "url": "https://github.com/wenisy/extract-array-keys/issues"
   },
-  "homepage": "https://github.com/wenisy/arrange-keys#readme",
+  "homepage": "https://github.com/wenisy/extract-array-keys#readme",
   "devDependencies": {
     "@types/jest": "^27.0.3",
     "jest": "^27.3.1",
