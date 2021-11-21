@@ -2,7 +2,7 @@
   "name": "extract-array-keys",
   "version": "1.0.5",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "files": [
     "lib/**/*"
   ],
