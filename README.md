@@ -27,7 +27,7 @@ itt will put all object keys with different key+values in uniqueKeys
 
 ## Return
 |Name|Type|Description|
-|:--|:--:|:-----:|:----------|
+|:--|:--:|:----------|
 |duplicatedKeys|`string[]`|Could get all excludedKeys from array|
 |uniqueKeys|`string[]`|Could get all includedKeys from array|
 
