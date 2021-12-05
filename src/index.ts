@@ -6,8 +6,8 @@ import { ExtractArrayKeysProps, ExtractArrayKeysReturnProps } from "./type";
  * it will put all object keys with different key+values in uniqueKeys
  *
  * @param array: The array you want to arrange, must be an object array, object could be nested
- * @param excludedKeys: The keys you want to remove by default
- * @param includedKeys: The keys you want to keep by default
+ * @param excludedKeys: The keys you want to remove(set as duplicatedKeys) by default
+ * @param includedKeys: The keys you want to keep(set as uniqueKeys) by default
  * @param specificKey: if object is nested, the specific key you want to start from
  *
  * @return {

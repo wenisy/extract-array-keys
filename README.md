@@ -16,6 +16,21 @@ itt will put all object keys with different key+values in uniqueKeys
 
 # **Usage**
 
+
+## Props
+|Name|Type|Default|Description|
+|:--|:--:|:-----:|:----------|
+|array|`ArrayKey[]`|`required`|The array you want to arrange, must be an object array, object could be nested|
+|excludedKeys|`string[]`|`[]`|The keys you want to remove(set as duplicatedKeys) by default|
+|includedKeys|`string[]`|`[]`|The keys you want to keep(set as uniqueKeys) by default|
+|specificKey|`string`|`undefined`|if object is nested, the specific key you want to start from|
+
+## Return
+|Name|Type|Description|
+|:--|:--:|:-----:|:----------|
+|duplicatedKeys|`string[]`|Could get all excludedKeys from array|
+|uniqueKeys|`string[]`|Could get all includedKeys from array|
+
 ## With only array
 
 ```tsx
@@ -33,7 +48,7 @@ const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
 
 console.log(duplicatedKeys)
 // ["a", "b"]
-console.log(uniquekeys)
+console.log(uniqueKeys)
 // ["c", "d"]
 ```
 
@@ -57,7 +72,7 @@ const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
 
 console.log(duplicatedKeys)
 // ["a", "b", "c"]
-console.log(uniquekeys)
+console.log(uniqueKeys)
 // ["d"]
 ```
 
@@ -81,7 +96,7 @@ const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
 
 console.log(duplicatedKeys)
 // ["b"]
-console.log(uniquekeys)
+console.log(uniqueKeys)
 // ["a", "c", "d"]
 ```
 
@@ -105,7 +120,7 @@ const { duplicatedKeys, uniqueKeys } = extractArrayKeys({
 
 console.log(duplicatedKeys)
 // ["b", "c"]
-console.log(uniquekeys)
+console.log(uniqueKeys)
 // ["a", "d"]
 ```
 
